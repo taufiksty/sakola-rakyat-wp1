@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sakola Rakyat | Rakyat Bisa Sakola</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
+    <script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=628e3a2ba34ee00019245dcb&product=inline-share-buttons" async="async"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Hubballi&family=Inter:wght@200;300;500;600;700&family=Lato:wght@300;400;700&family=Poppins:wght@300;400;500;600;700;800&display=swap');
+        * {
+            font-family: Poppins, sans-serif;
+            /* border: 1px solid red; */
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+
+    <!--------------- Navbar --------------->
+    <header class="sticky top-0 z-10">
+        <nav class="bg-blue-800 text-white shadow md:flex md:justify-between md:items-center py-5">
+            <div class="flex justify-between items-center">
+                <span class="font-bold mx-5 text-xl md:text-2xl cursor-pointer hover:text-yellow-200 duration-500 ease-in-out">
+                    <a href="#home">Sakola Rakyat</a>
+                </span>
+                <span class="text-3xl cursor-pointer mx-5 md:hidden block">
+                    <ion-icon name="menu-outline" onclick="Menu(this)"></ion-icon>
+                </span>
+            </div>
+            <ul class="-mt-1 md:flex md:items-center z-10 md:z-auto md:static absolute bg-blue-800 w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500">
+                <li class="mx-4 my-6 md:my-0 md:mx-6 hover:text-yellow-200 duration-500 ease-in-out"><a href="#home">Beranda</a></li>
+                <li class="mx-4 my-6 md:my-0 md:mx-6 hover:text-yellow-200 duration-500 ease-in-out"><a href="#about">Profil</a></li>
+                <li class="mx-4 my-6 md:my-0 md:mx-6 hover:text-yellow-200 duration-500 ease-in-out"><a href="#events">Kegiatan</a></li>
+                <li class="mx-4 my-6 md:my-0 md:mx-6 hover:text-yellow-200 duration-500 ease-in-out"><a href="#howtoparticipate">Cara Berpartisipasi</a>
+                <li class="mx-4 my-6 md:my-0 md:mx-6 hover:text-yellow-200 duration-500 ease-in-out"><a href="#contactus">Kontak Kami</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <!--------------- Beranda --------------->
+    <section id="home">
+        <div class="p-12 text-center relative overflow-hidden bg-no-repeat bg-cover" style="background-image: url('https://media.istockphoto.com/photos/father-and-son-going-to-school-picture-id1211369945?b=1&k=20&m=1211369945&s=170667a&w=0&h=5LrTuW3wwijOAOSVEkQJLmX_fZJmgg8nsAth6Ujv-9A='); height: 500px;">
+        <div class="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed" style="background-color: rgba(0, 0, 0, 0.6)">
+        <div class="flex justify-center items-center h-full">
+            <div class="text-white">
+            <img src="assets/img/logosakolarakyat-modified.png" class="md:h-24 h-20 md:w-24 w-20 block m-auto pb-2" alt="Logo Sakola Rakyat">
+            <h2 class="font-bold md:text-4xl text-2xl mb-4">Selamat Datang di Website Kami!</h2>
+            <h4 class="font-medium md:text-xl text-base mb-6">Pendidikan adalah hak semua orang <span class="inline-block"><b>tanpa terkecuali</b>.</span></h4>
+            <a class="inline-block px-7 py-3 mb-1 border-2 border-gray-200 text-gray-200 font-medium text-sm leading-snug uppercase rounded hover:bg-red-200 hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-500 ease-in-out" href="#howtoparticipate" role="button" data-mdb-ripple="true" data-mdb-ripple-color="light">
+                Klik Aksi Kamu
+            </a>
+            </div>
+        </div>
+        </div>
+        </div>
+    </section>
+
+
+    <!--------------- Profil --------------->
+    <section id="about">
+        <div class="pt-14 bg-gradient-to-r from-sky-100 to-indigo-300 grid gap-4 lg:grid-cols-10 lg:gap-1">
+
+            <!------ Akordeon Profil ------>
+            <div class="lg:col-span-7">
+                <div class="font-semibold md:text-3xl text-2xl my-5 text-center">Profil</div>
+                <div class="accordion mx-10" id="accordionExample5">
+                    <div class="accordion-item bg-white border border-gray-200">
+                        <h2 class="accordion-header mb-0" id="headingOne5">
+                            <button class="accordion-button relative flex items-center w-full py-4 px-5 md:text-lg text-base text-gray-800 text-left bg-white border-0 rounded-none transition focus:outline-none " type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne5" aria-expanded="true" aria-controls="collapseOne5">
+                                Apa itu Sakola Rakyat?
+                            </button>
+                        </h2>
+                        <div id="collapseOne5" class="accordion-collapse collapse show" aria-labelledby="headingOne5">
+                            <div class="accordion-body py-4 px-5 font-normal text-justify md:text-lg text-base mx-10 my-2">
+                                <b>Sakola Rakyat</b> merupakan gerakan pendidikan alternatif yang diisi oleh <b>anak muda Cianjur</b> yang peduli terhadap mahalnya akses pendidikan dan kakunya sistem pendidikan di sekolah formal serta minimnya tingkat literasi di sebagian daerah di Cianjur. Sakola Rakyat memiliki <b>prinsip</b> untuk membangun ruang pendidikan yang ramah, non-kekerasan, dan anti diskriminasi bagi semua.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item bg-white border border-gray-200">
+                        <h2 class="accordion-header mb-0" id="headingTwo5">
+                            <button class="accordion-button collapsed relative flex items-center w-full py-4 px-5 md:text-lg text-base text-gray-800 text-left bg-white border-0 rounded-none transition focus:outline-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo5" aria-expanded="false" aria-controls="collapseTwo5">
+                                Isu yang coba kami pecahkan?
+                            </button>
+                        </h2>
+                        <div id="collapseTwo5" class="accordion-collapse collapse" aria-labelledby="headingTwo5">
+                            <div class="accordion-body py-4 px-5 font-normal text-justify md:text-lg text-base mx-10 my-2">
+                                <b>Komersialisasi pendidikan</b> adalah salah satunya. Kami menilai terdapat pencurian nilai lebih yang memberikan dampak terhadap <b>akses pendidikan yang tidak merata</b> bahkan hingga hari ini biaya pendidikan layak semakin tinggi. Maka dari itu, <b>Sakola Rakyat</b> mencoba hadir sebagai <b>ruang independen</b> bagi masyarakat yang tidak mampu memenuhi hal tersebut.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item bg-white border border-gray-200">
+                        <h2 class="accordion-header mb-0" id="headingThree5">
+                            <button class="accordion-button collapsed relative flex items-center w-full py-4 px-5 md:text-lg text-base text-gray-800 text-left bg-white border-0 rounded-none transition focus:outline-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree5" aria-expanded="false" aria-controls="collapseThree5">
+                                Apa visi Sakola Rakyat?
+                            </button>
+                        </h2>
+                        <div id="collapseThree5" class="accordion-collapse collapse" aria-labelledby="headingThree5">
+                            <div class="accordion-body py-4 px-5 font-normal text-justify md:text-lg text-base mx-10 my-2">
+                                Mewujudkan <b>pendidikan terbaik</b> bagi seluruh siswa di Indonesia dan berkomitmen untuk gotong-royong menciptakan <b>inovasi-inovasi pembelajaran relevan</b> sehingga berdampak baik untuk tujuan bersama, khususnya peningkatan <b>kualitas belajar</b> siswa Indonesia. 
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item bg-white border border-gray-200">
+                        <h2 class="accordion-header mb-0" id="headingFour5">
+                            <button class="accordion-button collapsed relative flex items-center w-full py-4 px-5 md:text-lg text-base text-gray-800 text-left bg-white border-0 rounded-none transition focus:outline-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour5" aria-expanded="false" aria-controls="collapseFour5">
+                                Apakah Sakola Rakyat berbeda dengan sekolah formal pada umumnya?
+                            </button>
+                        </h2>
+                        <div id="collapseFour5" class="accordion-collapse collapse" aria-labelledby="headingFour5">
+                            <div class="accordion-body py-4 px-5 font-normal text-justify md:text-lg text-base mx-10 my-2">
+                                Ya, <b>Sakola Rakyat</b> merupakan <b>gerakan</b> dalam upaya untuk menerapkan pendidikan terhadap masalah yang ada dan banyak menekankan <b>aspek dialog</b> antara pengajar dan siswa. Bagi siapa pun yang hendak belajar di Sakola Rakyat <b>tidak ada batasan</b>, setiap siswa berhak mendapatkan ilmu yang sama tanpa harus berkompetisi satu sama lain.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item bg-white border border-gray-200">
+                        <h2 class="accordion-header mb-0" id="headingFive5">
+                            <button class="accordion-button collapsed relative flex items-center w-full py-4 px-5 md:text-lg text-base text-gray-800 text-left bg-white border-0 rounded-none transition focus:outline-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive5" aria-expanded="false" aria-controls="collapseFive5">
+                                Apa saja yang diajarkan di Sakola Rakyat?
+                            </button>
+                        </h2>
+                        <div id="collapseFive5" class="accordion-collapse collapse" aria-labelledby="headingFive5">
+                            <div class="accordion-body py-4 px-5 font-normal text-justify md:text-lg text-base mx-10 my-2">
+                                <b>Sakola Rakyat</b> mengajarkan <b>kemampuan dasar</b> untuk anak-anak seperti membaca, menulis dan berhitung dengan <b>metode yang mengasyikkan</b>, selain itu kami juga mengajak anak-anak untuk membuat karya seni dan <b>memulai gotong royong</b> sejak dini, agar mereka memiliki <b>jiwa sosial</b> dan <b>rasa peduli yang tinggi</b>.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!---------- Gambar ---------->
+            <div class="lg:col-span-3 md:p-10 p-10 hidden lg:block">
+                <img src="assets/img/sakola-rakyat-poster.jpg" class="md:w-auto md:h-auto lg:w-screen lg:h-screen">
+            </div>
+        </div>
+    </section>    
+
+
+    <!-------------- Kegiatan -------------->
+    <section id="events">
+        <div class="py-20 pb-10 bg-gradient-to-r from-sky-100 to-indigo-300">
+            <div class="font-semibold md:text-3xl text-2xl my-5 mt-0 text-center">Kegiatan</div>
+
+            <!--------- Slider Card --------->
+            <div class="md:hidden">
+                <div id="carouselExampleIndicators" class="carousel slide relative" data-bs-ride="carousel">
+                    <div class="carousel-indicators absolute right-0 bottom-0 left-0 flex justify-center p-0 mb-4">
+                      <button
+                        type="button"
+                        data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide-to="0"
+                        class="active"
+                        aria-current="true"
+                        aria-label="Slide 1"
+                      ></button>
+                      <button
+                        type="button"
+                        data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide-to="1"
+                        aria-label="Slide 2"
+                      ></button>
+                      <button
+                        type="button"
+                        data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide-to="2"
+                        aria-label="Slide 3"
+                      ></button>
+                    </div>
+                    <div class="carousel-inner relative w-full overflow-hidden">
+                      <div class="carousel-item active float-left w-full">
+                        <div class="ml-auto mr-auto rounded-lg shadow-lg bg-white max-w-xs mx-6 my-6">
+                            <a href="https://www.instagram.com/p/CQNji-rJ5EM/" target="_blank">
+                                <img class="rounded-t-lg h-auto w-auto" src="assets/img/event1.jpg" alt=""/>
+                            </a>
+                            <div class="p-6">
+                                <h5 class="text-gray-900 text-xl font-medium mb-2">30 Mei 2021</h5>
+                                <p class="text-gray-700 text-base mb-4">
+                                    Awal pembukaan kelas untuk anak-anak disambut hangat dan meriah, semua senang karena buku-buku telah datang untuk dibaca dan diceritakan.
+                                </p>
+                                <a href="https://www.instagram.com/p/CQNji-rJ5EM/" target="_blank"><button type="button" class=" inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Read More</button></a>
+                            </div>
+                        </div>
+                      </div>
+                      <div class="carousel-item float-left w-full">
+                        <div class="ml-auto mr-auto rounded-lg shadow-lg bg-white max-w-xs mx-6 my-6">
+                            <a href="https://www.instagram.com/p/CQFogJYp9mA/" target="_blank">
+                                <img class="rounded-t-lg h-auto w-auto" src="assets/img/event2.jpg" alt=""/>
+                            </a>
+                            <div class="p-6">
+                                <h5 class="text-gray-900 text-xl font-medium mb-2">6 Juni 2021</h5>
+                                <p class="text-gray-700 text-base mb-4">
+                                    Anak-anak sangat senang dan bersemangat membuat sketsa design inspiratif dari <a href="https://instagram.com/sugarbombingworld" class="text-blue-500 underline">@sugarbombingworld</a> 😁😍
+                                </p>
+                                <a href="https://www.instagram.com/p/CQFogJYp9mA/" target="_blank"><button type="button" class=" inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Read More</button></a>
+                            </div>
+                        </div>
+                      </div>
+                      <div class="carousel-item float-left w-full">
+                        <div class="ml-auto mr-auto rounded-lg shadow-lg bg-white max-w-xs mx-6 my-6">
+                            <a href="https://www.instagram.com/p/CQITXsopZ3w/" target="_blank">
+                                <img class="rounded-t-lg h-auto w-auto" src="assets/img/event3.jpg" alt=""/>
+                            </a>
+                            <div class="p-6">
+                                <h5 class="text-gray-900 text-xl font-medium mb-2">13 Juni 2021</h5>
+                                <p class="text-gray-700 text-base mb-4">
+                                    Setiap akhir pekan rutin dibuka ruang bermain & belajar bagi anak. Selain itu disela-sela belajar, para ibu bergotong royong untuk memasak makanan bagi semua.Jadi, semua kenyang semua senang 😁
+                               </p>
+                                <a href="https://www.instagram.com/p/CQITXsopZ3w/" target="_blank"><button type="button" class=" inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Read More</button></a>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+                    <button
+                      class="carousel-control-prev absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline left-0"
+                      type="button"
+                      data-bs-target="#carouselExampleIndicators"
+                      data-bs-slide="prev"
+                    >
+                      <span class="carousel-control-prev-icon inline-block bg-no-repeat" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button
+                      class="carousel-control-next absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline right-0"
+                      type="button"
+                      data-bs-target="#carouselExampleIndicators"
+                      data-bs-slide="next"
+                    >
+                      <span class="carousel-control-next-icon inline-block bg-no-repeat" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                  </div>
+            </div>
+            
+            <!--------- Cards Kegiatan --------->
+            <div class="hidden md:block">
+                <div class="flex flex-col flex-wrap flex-auto md:flex-row justify-center py-4">
+                    <div class="rounded-lg shadow-lg bg-white max-w-xs mx-6 my-6">
+                    <a href="https://www.instagram.com/p/CQNji-rJ5EM/" target="_blank">
+                        <img class="rounded-t-lg h-auto w-auto" src="assets/img/event1.jpg" alt=""/>
+                    </a>
+                    <div class="p-6">
+                        <h5 class="text-gray-900 text-xl font-medium mb-2">30 Mei 2021</h5>
+                        <p class="text-gray-700 text-base mb-4">
+                            Awal pembukaan kelas untuk anak-anak disambut hangat dan meriah, semua senang karena buku-buku telah datang untuk dibaca dan diceritakan.
+                        </p>
+                        <a href="https://www.instagram.com/p/CQNji-rJ5EM/" target="_blank"><button type="button" class=" inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Selengkapnya</button></a>
+                    </div>
+                    </div>
+                    <div class="rounded-lg shadow-lg bg-white max-w-xs mx-6 my-6">
+                        <a href="https://www.instagram.com/p/CQFogJYp9mA/" target="_blank">
+                        <img class="rounded-t-lg h-auto w-auto" src="assets/img/event2.jpg" alt=""/>
+                        </a>
+                        <div class="p-6">
+                        <h5 class="text-gray-900 text-xl font-medium mb-2">6 Juni 2021</h5>
+                        <p class="text-gray-700 text-base mb-4">
+                            Anak-anak sangat senang dan bersemangat membuat sketsa design inspiratif dari <a href="https://instagram.com/sugarbombingworld" class="text-blue-500 underline">@sugarbombingworld</a> 😁😍
+                        </p>
+                        <a href="https://www.instagram.com/p/CQFogJYp9mA/" target="_blank"><button type="button" class=" inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Selengkapnya</button></a>
+                        </div>
+                    </div>
+                    <div class="rounded-lg shadow-lg bg-white max-w-xs mx-6 my-6">
+                        <a href="https://www.instagram.com/p/CQITXsopZ3w/" target="_blank">
+                        <img class="rounded-t-lg h-auto w-auto" src="assets/img/event3.jpg" alt=""/>
+                        </a>
+                        <div class="p-6">
+                        <h5 class="text-gray-900 text-xl font-medium mb-2">13 Juni 2021</h5>
+                        <p class="text-gray-700 text-base mb-4">
+                            Setiap akhir pekan rutin dibuka ruang bermain & belajar bagi anak. Selain itu disela-sela belajar, para ibu bergotong royong untuk memasak makanan bagi semua. Jadi, semua kenyang semua senang 😁
+                        </p>
+                        <a href="https://www.instagram.com/p/CQITXsopZ3w/" target="_blank"><button type="button" class=" inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Selengkapnya</button></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!----------- Cara Berpartisipasi ----------->
+    <section id="howtoparticipate">
+       <div class="py-20 bg-sky-100">
+            <div class="font-semibold md:text-3xl text-2xl my-5 mt-0 text-center">Cara Berpartisipasi</div>
+            <div class="grid grid-rows-2 md:grid-rows-2 gap-4 lg:grid-cols-4 lg:grid-rows-none">
+                <div class="md:mx-10 lg:mr-5">
+                    <img src="assets/img/cara-berpartisipasi.jpg" alt="Mari Berpartisipasi" class="px-10 md:p-0 md:py-0 md:col-span-1 h-full w-full md:w-full md:h-full">
+                </div>
+                <div class="bg-white md:col-span-3 mx-10 p-5 lg:ml-5">
+                    <p class="font-normal text-lg text-justify">Kamu dapat berpartisipasi dalam bentuk apa pun sesuai dengan kemampuan dan kapasitas yang dimiliki seperti: langsung datang ke lokasi dan menginisiasi ide-ide baru bersama atau memberikan dukungan seperti membuat sebuah karya kesenian, mendonasikan sesuatu yang bermanfaat, dan menyebarluaskan informasi sesuai kemampuan kamu.
+                    <br><br>
+                    Bagi kamu yang ingin mengirimkan karya atau bentuk donasi lainnya tidak perlu sungkan untuk ketuk <span class="underline text-blue-600"><a href="https://www.instagram.com/direct/t/340282366841710300949128226567056943775">dm</a></span> kami. Apapun yang bisa kamu berikan merupakan partisipasi besar bagi gerakan ini terutama <span class="text-blue-600"><a href="https://www.instagram.com/sakolarakyat/">@sakolarakyat</a></span>. Jadi jangan takut dan jangan khawatir, karena <span class="bg-red-200">semua orang yang berani dan masih mempertahankan kesadarannya punya kapasitas dan perannya masing-masing untuk setiap perubahan yang ia ciptakan.</span></p>
+                </div>
+            </div>
+       </div> 
+    </section>
+
+
+    <!----------- Kontak Kami ----------->
+    <section id="contactus">
+        <footer class="bg-blue-800 m-0">
+            <div class="flex flex-col md:flex-row gap-1">
+                <div class="m-10 md:flex-auto">
+                    <p class="text-lg md:text-xl font-medium text-white mb-3">Kirim Pesanmu</p>
+                    <form action="https://formspree.io/f/meqnnajl" method="POST">
+                        <div class="form-group mb-4">
+                            <input type="text" name="Nama" id="Nama" placeholder="Nama" class="form-control block
+                            w-full
+                            px-3
+                            py-1.5
+                            text-base
+                            font-normal
+                            text-gray-700
+                            bg-white bg-clip-padding
+                            border border-solid border-gray-300
+                            rounded
+                            transition
+                            ease-in-out
+                            m-0
+                            focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none">
+                        </div>
+                        <div class="form-group mb-4">
+                            <input type="email" name="Email" id="Email" placeholder="Email" class="form-control block
+                            w-full
+                            px-3
+                            py-1.5
+                            text-base
+                            font-normal
+                            text-gray-700
+                            bg-white bg-clip-padding
+                            border border-solid border-gray-300
+                            rounded
+                            transition
+                            ease-in-out
+                            m-0
+                            focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none">
+                        </div>
+                        <div class="form-group mb-4">
+                            <textarea id="Pesan"
+                            name="Pesan"
+                            rows="3"
+                            placeholder="Pesan"
+                            class="
+                            form-control
+                            block
+                            w-full
+                            px-3
+                            py-1.5
+                            text-base
+                            font-normal
+                            text-gray-700
+                            bg-white bg-clip-padding
+                            border border-solid border-gray-300
+                            rounded
+                            transition
+                            ease-in-out
+                            m-0
+                            focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none
+                            ">
+                            </textarea>
+                        </div>
+                        <button type="submit" class="
+                            w-full
+                            px-6
+                            py-2.5
+                            bg-blue-600
+                            text-white
+                            font-medium
+                            text-xs
+                            leading-tight
+                            uppercase
+                            rounded
+                            shadow-md
+                            hover:bg-blue-700 hover:shadow-lg
+                            focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0
+                            active:bg-blue-800 active:shadow-lg
+                            transition
+                            duration-150
+                            ease-in-out">Kirim
+                        </button>
+                    </form>
+                </div>
+                <div class="md:flex-auto md:pt-16 md:w-3/12">
+                    <div class="text-lg md:text-xl font-medium text-center text-white pb-2">
+                    Atau kontak kami di
+                        <div class="flex justify-center mb-10 mt-3">
+                            <a 
+                                href="https://instagram.com/sakolarakyat" 
+                                class="mr-9 text-gray-800">
+                                <svg 
+                                    xmlns="http://www.w3.org/2000/svg" 
+                                    x="0px" 
+                                    y="0px"
+                                    width="32" 
+                                    height="32"
+                                    viewBox="0 0 24 24"
+                                    style=" fill:white;"
+                                >    
+                                <path 
+                                    d="M 8 3 C 5.243 3 3 5.243 3 8 L 3 16 C 3 18.757 5.243 21 8 21 L 16 21 C 18.757 21 21 18.757 21 16 L 21 8 C 21 5.243 18.757 3 16 3 L 8 3 z M 8 5 L 16 5 C 17.654 5 19 6.346 19 8 L 19 16 C 19 17.654 17.654 19 16 19 L 8 19 C 6.346 19 5 17.654 5 16 L 5 8 C 5 6.346 6.346 5 8 5 z M 17 6 A 1 1 0 0 0 16 7 A 1 1 0 0 0 17 8 A 1 1 0 0 0 18 7 A 1 1 0 0 0 17 6 z M 12 7 C 9.243 7 7 9.243 7 12 C 7 14.757 9.243 17 12 17 C 14.757 17 17 14.757 17 12 C 17 9.243 14.757 7 12 7 z M 12 9 C 13.654 9 15 10.346 15 12 C 15 13.654 13.654 15 12 15 C 10.346 15 9 13.654 9 12 C 9 10.346 10.346 9 12 9 z"
+                                >
+                                </path>
+                                </svg>
+                            </a>
+                            <a href="https:wa.me/6281320906058">
+                                <svg 
+                                    xmlns="http://www.w3.org/2000/svg" 
+                                    x="0px" 
+                                    y="0px"
+                                    width="32" 
+                                    height="32"
+                                    viewBox="0 0 24 24"
+                                    style=" fill:white;"
+                                >    
+                                <path 
+                                    d="M 12.011719 2 C 6.5057187 2 2.0234844 6.478375 2.0214844 11.984375 C 2.0204844 13.744375 2.4814687 15.462563 3.3554688 16.976562 L 2 22 L 7.2324219 20.763672 C 8.6914219 21.559672 10.333859 21.977516 12.005859 21.978516 L 12.009766 21.978516 C 17.514766 21.978516 21.995047 17.499141 21.998047 11.994141 C 22.000047 9.3251406 20.962172 6.8157344 19.076172 4.9277344 C 17.190172 3.0407344 14.683719 2.001 12.011719 2 z M 12.009766 4 C 14.145766 4.001 16.153109 4.8337969 17.662109 6.3417969 C 19.171109 7.8517969 20.000047 9.8581875 19.998047 11.992188 C 19.996047 16.396187 16.413812 19.978516 12.007812 19.978516 C 10.674812 19.977516 9.3544062 19.642812 8.1914062 19.007812 L 7.5175781 18.640625 L 6.7734375 18.816406 L 4.8046875 19.28125 L 5.2851562 17.496094 L 5.5019531 16.695312 L 5.0878906 15.976562 C 4.3898906 14.768562 4.0204844 13.387375 4.0214844 11.984375 C 4.0234844 7.582375 7.6067656 4 12.009766 4 z M 8.4765625 7.375 C 8.3095625 7.375 8.0395469 7.4375 7.8105469 7.6875 C 7.5815469 7.9365 6.9355469 8.5395781 6.9355469 9.7675781 C 6.9355469 10.995578 7.8300781 12.182609 7.9550781 12.349609 C 8.0790781 12.515609 9.68175 15.115234 12.21875 16.115234 C 14.32675 16.946234 14.754891 16.782234 15.212891 16.740234 C 15.670891 16.699234 16.690438 16.137687 16.898438 15.554688 C 17.106437 14.971687 17.106922 14.470187 17.044922 14.367188 C 16.982922 14.263188 16.816406 14.201172 16.566406 14.076172 C 16.317406 13.951172 15.090328 13.348625 14.861328 13.265625 C 14.632328 13.182625 14.464828 13.140625 14.298828 13.390625 C 14.132828 13.640625 13.655766 14.201187 13.509766 14.367188 C 13.363766 14.534188 13.21875 14.556641 12.96875 14.431641 C 12.71875 14.305641 11.914938 14.041406 10.960938 13.191406 C 10.218937 12.530406 9.7182656 11.714844 9.5722656 11.464844 C 9.4272656 11.215844 9.5585938 11.079078 9.6835938 10.955078 C 9.7955938 10.843078 9.9316406 10.663578 10.056641 10.517578 C 10.180641 10.371578 10.223641 10.267562 10.306641 10.101562 C 10.389641 9.9355625 10.347156 9.7890625 10.285156 9.6640625 C 10.223156 9.5390625 9.737625 8.3065 9.515625 7.8125 C 9.328625 7.3975 9.131125 7.3878594 8.953125 7.3808594 C 8.808125 7.3748594 8.6425625 7.375 8.4765625 7.375 z"
+                                >
+                                </path>
+                                </svg>
+                            </a>             
+                        </div>
+                    </div>
+                    <div class="md:flex-auto text-lg md:text-xl font-medium text-center text-white pb-8">
+                        Bagikan laman ini melalui
+                        <div class="sharethis-inline-share-buttons w-7/12 md:w-4/6 mt-3 top-1/2 left-1/2 translate-x-1/2 items-center"></div>
+                    </div>
+                </div>
+            </div>            
+            <div class="text-center p-4 text-gray-700 bg-gray-300">
+                &copy; 2022 Copyright: <a href="https://instagram.com/sakolarakyat">Sakola Rakyat</a>
+            </div>
+        </footer>
+    </section>
+
+    <script>
+        function Menu(e) {
+            let list = document.querySelector('ul');
+            e.name === 'menu' ? (e.name = 'close', list.classList.add('top-[80px]'), list.classList.add('opacity-100')) : (e.name = 'menu', list.classList.remove('top-[80px]'), list.classList.remove('opacity-100'));
+        }
+    </script>
+</body>
+</html>
